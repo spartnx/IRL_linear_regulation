@@ -1,0 +1,15 @@
+experiments.m (runnable script)
+	> test the online_linreg function that implements the IRL policy iteration algo developed by Vrabie on as many examples as desired.
+
+linear_regulation.m (runnable script)
+	> preliminary code used to developed online_linreg
+	> the same example is implemented in experiments.m so it's preferrable to run experiments.m
+
+vrabie_ONLINEpolicyiteration.m
+	> Vrabie's code 
+
+
+Comments
+- I managed to reproduce Vrabie's adaptive Optimal control for linear regulation on both the example in her code vrabie_ONLINEpolicyiteration_lin.m and on her paper example. I'm not using her weird "ch" variable in the code. I used only two nested checks: one on whether it's time to update the critic weights, and the other on whether the temporal difference error is below some user-defined threshold. 
+- I noticed that if the threshold is too small, at some point the least square matrix will become rank deficient (which I think is because the states are getting closer and closer to 0, as discussed many times with Alex). When I change the dynamics matrix in the middle of the simulation to simulate a change in true dynamics (as Vrabie did in her code at iteration 21), the algorithm does not seem to behave properly: this needs to be investigated.
+- like Vrabie, I didn't implement persistence of excitation. This does not seem to be needed in these two examples. Is it generalizable to linear systems?
