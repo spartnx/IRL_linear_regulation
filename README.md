@@ -4,6 +4,7 @@ The dynamic controller implemented in [1] finds a close estimate of the unique p
 
 ### Basic Usage
 The IRL algorithm is implemented in `online_linreg.m`. It is validated in `experiments.m`.
+
 The first experiment - `exp = 1` - validates the implementation on the example given in [1]. 
 The second experiment - `exp = 2` - validates the implementation on the example given in the Matlab code `ONLINEpolicyiteration_lin.m` found in [2] as [Link to Vrabie software for continuous-time ADP](https://lewisgroup.uta.edu/code/vrabie.zip).
 
@@ -15,5 +16,6 @@ The `online_linreg.m` is defined as a Matlab function that can be used in custom
 
 ### References
 [1] Vrabie, D., Pastravanu, O., Abu-Khalaf, M., and Lewis, F.L., "Adaptive Optimal Control for Continuous-Time Linear Systems Based on Policy Iteration," Automatica, Vol.  45, pp. 477-484, 2009.
+
 [2] [Software Related to Funded Research of F.L. Lewis](https://lewisgroup.uta.edu/code/Software%20from%20Research.htm)
 
